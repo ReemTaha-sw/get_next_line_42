@@ -117,3 +117,83 @@ int	main(void)
 	close(fd);
 	return (0);
 }
+// Main for user input :
+
+// int main()
+// {
+//     char *line;
+
+//     int i;
+//     i = 0;
+
+//     while(i < 1)
+//     {
+//         line = get_next_line(0);
+//         if(line == NULL)
+//             break;
+//         printf("line: %s",line);
+//         free(line);
+//      i++;
+//     }
+//     return(0);
+// }
+
+
+// Main for bonus:
+
+
+// int main(void)
+// {
+//     char    *line;
+//     int     i;
+//     int     fd1;
+//     int     fd2;
+//     int     fd3;
+
+//     fd1 = open("jj.txt", O_RDONLY);
+//     fd2 = open("jj1.txt", O_RDONLY);
+//     fd3 = open("jj2.txt", O_RDONLY);
+//     printf("\n\n=====  get next line from one file  =====\n\n");
+//     i = 1;
+//     while (i < 3)
+//     {
+//         line = get_next_line(fd1);
+//         printf("line %d:            %s", i, line);
+//         free(line);
+//         line = get_next_line(fd2);
+//         printf("line %d:            %s", i, line);
+//         free(line);
+//         line = get_next_line(fd3);
+//         printf("line %d:            %s", i, line);
+//         free(line);
+//         i++;
+//     }
+//     printf("\n\n=====  colseing get next line with multibles files  =====\n\n");
+//     close(fd1);
+//     close(fd2);
+//     close(fd3);
+//     return (0);
+// }
+
+
+// Main for the normal get_next_line:
+
+// int main(void)
+// {
+//     char    *line;
+//     int     i;
+//     int     fd;
+
+//     fd = open("jj.txt", O_RDONLY);
+//     printf("\n\n=====  get next line one file  =====\n\n");
+//     i = 1;
+//     while (i < 3)
+//     {
+//         line = get_next_line(fd);
+//         printf("file :: line %d: ---------->  %s", i, line);
+//         i++;
+//     }
+//     printf("\n\n=====  colseing get next line  =====\n\n");
+//     close(fd);
+//     return (0);
+// }
