@@ -6,7 +6,7 @@
 /*   By: rosman <rosman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/02 21:41:33 by hankhali          #+#    #+#             */
-/*   Updated: 2023/09/07 19:33:01 by rosman           ###   ########.fr       */
+/*   Updated: 2023/09/08 15:56:08 by rosman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <stddef.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 2
+#  define BUFFER_SIZE 42
 # endif
 
 char	*ft_strjoin(char *string1, char *string2);

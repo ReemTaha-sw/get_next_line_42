@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rosman <rosman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 15:17:25 by hankhali          #+#    #+#             */
-/*   Updated: 2023/09/06 19:42:26 by rosman           ###   ########.fr       */
+/*   Updated: 2023/09/08 15:52:31 by rosman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <stddef.h>
-#include <stdlib.h>
+#include "get_next_line_bonus.h"
 
 int	ft_strlen(const char *str)
 {

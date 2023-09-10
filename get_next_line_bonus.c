@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rosman <rosman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 20:49:46 by hankhali          #+#    #+#             */
-/*   Updated: 2023/09/08 13:23:58 by rosman           ###   ########.fr       */
+/*   Updated: 2023/09/08 16:41:30 by rosman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <stddef.h>
-#include <stdlib.h>
+#include "get_next_line_bonus.h"
 
 char	*read_line(int fd, char *str)
 {
-	char	buffer[BUFFER_SIZE];
+	char	buffer[BUFFER_SIZE + 2];
 	int		bytes_read;
 
 	bytes_read = 1;
@@ -96,37 +94,4 @@ char	*get_next_line(int fd)
 	line = extract_line(buffer[fd]);
 	buffer[fd] = skip_line(buffer[fd]);
 	return (line);
-}
-
-int	main(void)
-{
-	char	*line;
-	int		i;
-	int		fd1;
-	int		fd2;
-	int		fd3;
-
-	fd1 = open("jj.txt", O_RDONLY);
-	fd2 = open("jj1.txt", O_RDONLY);
-	fd3 = open("jj2.txt", O_RDONLY);
-	printf("\n\n=====  get next line from one file  =====\n\n");
-	i = 1;
-	while (i < 3)
-	{
-		line = get_next_line(fd1);
-		printf("line %d: 			%s", i, line);
-		free(line);
-		line = get_next_line(fd2);
-		printf("line %d: 			%s", i, line);
-		free(line);
-		line = get_next_line(fd3);
-		printf("line %d: 			%s", i, line);
-		free(line);
-		i++;
-	}
-	printf("\n\n=====  colseing get next line with multibles files  =====\n\n");
-	close(fd1);
-	close(fd2);
-	close(fd3);
-	return (0);
 }
